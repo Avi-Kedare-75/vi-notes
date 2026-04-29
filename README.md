@@ -1,73 +1,123 @@
-# React + TypeScript + Vite
+# 📝 Vi-Notes Editor
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Vi-Notes Editor** is a minimal, distraction-free writing environment designed as the foundation for the Vi-Notes authenticity verification system. It provides a clean interface for users to write while capturing behavioral signals such as typing patterns, pauses, and paste actions.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Features
 
-## React Compiler
+* ✍️ **Distraction-Free Writing**
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+  * Fullscreen editor with clean UI
+  * No formatting clutter
 
-## Expanding the ESLint configuration
+* ⌨️ **Behavior Tracking**
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+  * Keystroke count tracking
+  * Pause detection (based on typing intervals)
+  * Paste event detection
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+* 🌙 **Dark / Light Mode**
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+  * Toggle between themes
+  * Consistent UI across modes
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+* 📊 **Live Statistics**
+
+  * Words and character count
+  * Real-time behavioral metrics
+
+* 🖥️ **Fullscreen Mode**
+
+  * Expand editor to full screen for focused writing
+
+---
+
+## 🛠️ Tech Stack
+
+* **Frontend:** React + TypeScript
+* **Styling:** Inline CSS (minimal & custom)
+* **Icons:** Font Awesome
+
+---
+
+## 📂 Project Structure (Simplified)
+
+```
+src/
+├── TextEditor.tsx   # Main editor component
+├── App.tsx          # Root component
+├── main.tsx         # Entry point
+├── index.css        # Global styles (important for layout fix)
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## ⚙️ Installation & Setup
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### 1. Install dependencies
+
+```bash
+npm install
 ```
+
+### 2. Run the project
+
+```bash
+npm run dev
+```
+
+---
+
+## ⚠️ Important Notes
+
+* Ensure **Font Awesome** is installed:
+
+```bash
+npm install @fortawesome/fontawesome-free
+```
+
+* Import it in `main.tsx`:
+
+```ts
+import "@fortawesome/fontawesome-free/css/all.min.css";
+```
+
+* The **global CSS (`index.css`) is required** to remove browser white borders and ensure full-screen rendering.
+
+---
+
+## 🎯 Purpose in Vi-Notes System
+
+This editor is not just for writing — it acts as the **data capture layer** for:
+
+* Typing behavior
+* Writing patterns
+* Interaction signals
+
+These will later be used for:
+
+* AI vs Human authorship detection
+* Behavioral analysis
+* Authenticity scoring
+
+---
+
+## 🔮 Future Enhancements
+
+* Behavioral ML model integration
+* Real-time authenticity scoring
+* Writing session replay
+* Cursor movement tracking
+* Backend (MERN) integration
+
+---
+
+
+
+## 🤝 Contributing
+
+Contributions are welcome!
+Feel free to open issues or submit pull requests.
+
+---
