@@ -9,7 +9,7 @@
 * ✍️ **Distraction-Free Writing**
 
   * Fullscreen editor with clean UI
-  * No formatting clutter
+  * No formatting clutter.
 
 * ⌨️ **Behavior Tracking**
 
