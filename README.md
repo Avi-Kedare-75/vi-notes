@@ -1,6 +1,6 @@
 # 📝 Vi-Notes Editor
 
-**Vi-Notes Editor** is a minimal, distraction-free writing environment designed as the foundation for the Vi-Notes authenticity verification system. It provides a clean interface for users to write while capturing behavioral signals such as typing patterns, pauses, and paste actions.
+**Vi-Notes Editor** is a minimal, distraction-free writing environment designed as the foundation for the Vi-Notes authenticity verification system. It provides a clean interface for users to write while capturing behavioral signals such as typing patterns, pauses, and paste actions
 
 ---
 
